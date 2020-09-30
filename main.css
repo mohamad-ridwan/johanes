@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: yellow;
+    user-select: none;
+    font-family: 'Dosis', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.modalMenu{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.800);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:blue;
+    gap: 20px;
+    z-index: 200;
+}
+
+.modalMenu a{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.modalMenu a:hover{
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: orange;
+}
+
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color:darkcyan;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    z-index : 100;
+}
+
+.brand{
+    font-size: 3rem;
+    color:fuchsia;
+    font-weight: 200;
+}
+
+.menuIcon{
+    color: #ffff;
+    font-size: 2rem;
+    margin-left: auto;
+}
+
+.menuIcon:hover{
+    color: orange;
+}
+
+.closeIcon{
+    font-size: 2rem;
+    color: orangered;
+    position: fixed;
+    top : 20vh;
+    right: 10vw;
+}
+
+.closeIcon:hover{
+    font-size: 3rem;
+    
+}
+
+.container section{
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+   
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home{
+    display: flex;
+    background-color:chartreuse;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.heroImage{
+    width: 350px;
+    height: 350px;
+    border-radius: 20px 20px 20px 250px;
+    object-fit: cover;
+    opacity: 0;
+    object-position: center;
+    animation-name: bottomToTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+
+.heroText{
+    color: #ffff;
+    font-size: 6rem;
+    opacity: 0;
+    animation-name: bottomToTop;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.about{
+    background-image: url(https://picsum.photos/seed/11/900);
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+.gallery{
+    background-image: url(https://picsum.photos/seed/28/900);
+    justify-content: center;
+    align-items: center;
+}
+
+.galIcon{
+    font-size: 8rem;
+    color: white;
+    animation-name: infRotate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.contact{
+    background-image: url(https://picsum.photos/seed/3/900);
+}
+
+.footer{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    padding: 0 10%;
+    color: white;
+    background-color: #000;
+}
+
+.left{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+.right{
+    width: 70%;
+    height: 100%;
+    display: flex;
+}
+
+.col1, .col2{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.formGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.kirim{
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+
+}
+
+.aboutAlert{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: orange;
+    color: white;
+    position: sticky;
+    top: 10vh;
+    left: 0;
+}
+
+
+
+@keyframes bottomToTop{
+    from{
+        transform: translateY(20vh);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes infRotate{
+
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+
+}
